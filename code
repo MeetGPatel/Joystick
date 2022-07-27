@@ -6,10 +6,6 @@ void setup()
   pinMode(2,INPUT);
   digitalWrite(2,HIGH);
   Serial.begin(115200);  
-  pinMode(7, OUTPUT);
-  pinMode(13, OUTPUT);
-  digitalWrite(13, HIGH);   
-  digitalWrite(7, HIGH);   
 }
 void loop()
 {
@@ -22,27 +18,5 @@ void loop()
   Serial.print("Y Aix : ");
   Serial.println(analogRead(1));   
   Serial.print("\n\n");
-  delay(500);
-
-      if(analogRead(1)>800)
-      {
-         
-         digitalWrite(13, HIGH);  
-         digitalWrite(7, LOW);  
-         Serial.print("\nDOWN\n"); 
-      }
-      if(analogRead(1)<200)
-      {    
-        digitalWrite(13, LOW);  
-        digitalWrite(7, HIGH);  
-        Serial.print("\nUP\n"); 
-      }    
-      if(analogRead(0)>600)
-      {
-          Serial.print("\nRIGHT\n"); 
-      }
-      if(analogRead(0)<200)
-      {    
-         Serial.print("\nLEFT\n"); 
-      }         
+  delay(500);    
 } 
